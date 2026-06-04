@@ -6,7 +6,6 @@
 <title>Vanilla SMP - Saison 2</title>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 *{
@@ -31,8 +30,8 @@ body::before{
     position:fixed;
     inset:0;
     background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-    url('https://images.minecraft.wiki/images/Grass_Block_JE7_BE6.png');
+        linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+        url('https://images.minecraft.wiki/images/Grass_Block_JE7_BE6.png');
     background-size:300px;
     opacity:.15;
     z-index:-1;
@@ -52,7 +51,7 @@ body::before{
     width:350px;
     max-width:90%;
     margin-bottom:25px;
-    filter:drop-shadow(0 0 30px #7CFC00);
+    filter:drop-shadow(0 0 25px #7CFC00);
 }
 
 h1{
@@ -69,7 +68,7 @@ h1{
 
 .ip-box{
     margin-top:30px;
-    background:#1c1c1c;
+    background:#1b1b1b;
     border:3px solid #7CFC00;
     border-radius:15px;
     padding:20px;
@@ -84,11 +83,11 @@ h1{
     margin-top:15px;
     padding:12px 25px;
     background:#7CFC00;
-    color:black;
     border:none;
     border-radius:10px;
-    cursor:pointer;
+    color:black;
     font-weight:bold;
+    cursor:pointer;
     transition:.3s;
 }
 
@@ -155,11 +154,11 @@ section{
 }
 
 .good{
-    background:#143214;
+    background:#163116;
 }
 
 .bad{
-    background:#3d1616;
+    background:#401818;
 }
 
 footer{
@@ -167,11 +166,6 @@ footer{
     padding:40px;
     background:#0a0a0a;
     color:#999;
-}
-
-.highlight{
-    color:#7CFC00;
-    font-weight:bold;
 }
 
 @media(max-width:768px){
@@ -189,23 +183,22 @@ h1{
 }
 
 }
-
 </style>
 </head>
 <body>
 
 <section class="hero">
 
-<img src="logo.png" alt="Logo Vanilla SMP Saison 2" class="logo">
+<img src="logo.png" alt="Vanilla SMP Saison 2" class="logo">
 
 <h1>VANILLA SMP</h1>
 
 <p class="subtitle">
-Saison 2 • Semi-Vanilla • Communauté • Survie
+Saison 2 • Semi-Vanilla • Survie Communautaire
 </p>
 
 <div class="ip-box">
-<div class="ip" id="ip">
+<div class="ip">
 SMP_S2.aternos.me:21375
 </div>
 
@@ -224,13 +217,13 @@ Copier l'IP
 
 <div class="card">
 <h3>Version</h3>
-<p>Serveur en <span class="highlight">1.21.11</span></p>
-<p>Toutes les versions peuvent rejoindre.</p>
+<p>Serveur en 1.21.11</p>
+<p>Compatible avec toutes les versions.</p>
 </div>
 
 <div class="card">
 <h3>Accessibilité</h3>
-<p>Serveur ouvert à tous.</p>
+<p>Ouvert à tous.</p>
 <p>Crack autorisé.</p>
 </div>
 
@@ -244,7 +237,6 @@ Copier l'IP
 <h3>Gameplay</h3>
 <p>Phantoms désactivés.</p>
 <p>X-Ray bloqué.</p>
-<p>Survie proche du Vanilla.</p>
 </div>
 
 </div>
@@ -253,13 +245,13 @@ Copier l'IP
 
 <section>
 
-<h2 class="section-title">Commandes Disponibles</h2>
+<h2 class="section-title">Commandes</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>🏠 Homes</h3>
-<p>Chaque joueur possède <strong>3 homes maximum</strong>.</p>
+<p>3 homes maximum.</p>
 <br>
 <p>/sethome</p>
 <p>/home</p>
@@ -281,7 +273,7 @@ Copier l'IP
 <h3>🎁 Kit New</h3>
 <p>/kit new</p>
 <br>
-<p>Disponible toutes les <strong>10 minutes</strong>.</p>
+<p>Cooldown : 10 minutes.</p>
 </div>
 
 </div>
@@ -295,6 +287,7 @@ Copier l'IP
 <div class="cards">
 
 <div class="card">
+
 <h3>🍎 Notch Apple Craftable</h3>
 
 <p>La pomme enchantée peut être craftée.</p>
@@ -303,8 +296,16 @@ Copier l'IP
 
 <p><strong>Recette :</strong></p>
 
-<p>🟨 Bloc d'or x8</p>
-<p>🍎 Pomme x1 au centre</p>
+<pre>
+🟨 🟨 🟨
+🟨 🍎 🟨
+🟨 🟨 🟨
+</pre>
+
+<p>
+🟨 = Bloc d'or<br>
+🍎 = Pomme
+</p>
 
 </div>
 
@@ -312,14 +313,22 @@ Copier l'IP
 
 <h3>⚒ Netherite Upgrade Simplifié</h3>
 
-<p>Pas besoin de chercher un template dans les Bastions.</p>
+<p>Plus besoin de trouver un template dans les Bastions.</p>
 
 <br>
 
 <p><strong>Recette :</strong></p>
 
-<p>Même recette que le jeu Vanilla.</p>
-<p>Le Netherite Upgrade est remplacé par <strong>7 diamants</strong>.</p>
+<pre>
+💎   💎
+💎 🟥 💎
+💎 💎 💎
+</pre>
+
+<p>
+💎 = Diamant<br>
+🟥 = Netherrack
+</p>
 
 </div>
 
@@ -338,7 +347,8 @@ Copier l'IP
 </div>
 
 <p style="margin-top:20px;">
-L'End restera fermé jusqu'à cette date afin que tous les joueurs démarrent sur un pied d'égalité.
+L'End restera fermé jusqu'à cette date.
+Prépare ton équipement pour affronter l'Ender Dragon !
 </p>
 
 </div>
@@ -347,11 +357,12 @@ L'End restera fermé jusqu'à cette date afin que tous les joueurs démarrent su
 
 <section>
 
-<h2 class="section-title">Règles Principales</h2>
+<h2 class="section-title">Règles</h2>
 
 <div class="rules">
 
 <div class="card good">
+
 <h3>✅ Autorisé</h3>
 
 <p>Construction</p>
@@ -384,28 +395,22 @@ L'End restera fermé jusqu'à cette date afin que tous les joueurs démarrent su
 
 <p>SMP_S2.aternos.me:21375</p>
 
-<br>
-
-<p>Bonne survie !</p>
-
 </footer>
 
 <script>
-
-function copyIP(){
+function copyIP() {
 
 navigator.clipboard.writeText("SMP_S2.aternos.me:21375");
 
-const btn = document.querySelector('.copy-btn');
+const btn = document.querySelector(".copy-btn");
 
-btn.innerText = "IP copiée !";
+btn.textContent = "IP copiée !";
 
 setTimeout(() => {
-btn.innerText = "Copier l'IP";
+btn.textContent = "Copier l'IP";
 }, 2000);
 
 }
-
 </script>
 
 </body>
