@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanilla SMP - Saison 2</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#111;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url('https://images.minecraft.wiki/images/Grass_Block_JE7_BE6.png');
+    background-size:300px;
+    opacity:.15;
+    z-index:-1;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:350px;
+    max-width:90%;
+    margin-bottom:25px;
+    filter:drop-shadow(0 0 30px #7CFC00);
+}
+
+h1{
+    font-size:4rem;
+    color:#7CFC00;
+    text-shadow:0 0 20px #7CFC00;
+}
+
+.subtitle{
+    margin-top:15px;
+    font-size:1.3rem;
+    color:#ddd;
+}
+
+.ip-box{
+    margin-top:30px;
+    background:#1c1c1c;
+    border:3px solid #7CFC00;
+    border-radius:15px;
+    padding:20px;
+}
+
+.ip{
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.copy-btn{
+    margin-top:15px;
+    padding:12px 25px;
+    background:#7CFC00;
+    color:black;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    transform:scale(1.05);
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:40px;
+    color:#7CFC00;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1b1b1b;
+    border:2px solid #333;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#7CFC00;
+}
+
+.card h3{
+    color:#7CFC00;
+    margin-bottom:10px;
+}
+
+.end-box{
+    text-align:center;
+    background:#24143a;
+    border:2px solid #a55cff;
+    border-radius:20px;
+    padding:40px;
+}
+
+.end-date{
+    font-size:3rem;
+    font-weight:800;
+    color:#c08cff;
+    margin-top:15px;
+}
+
+.rules{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.good{
+    background:#143214;
+}
+
+.bad{
+    background:#3d1616;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#0a0a0a;
+    color:#999;
+}
+
+.highlight{
+    color:#7CFC00;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:2.5rem;
+}
+
+.rules{
+    grid-template-columns:1fr;
+}
+
+.end-date{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<img src="logo.png" alt="Logo Vanilla SMP Saison 2" class="logo">
+
+<h1>VANILLA SMP</h1>
+
+<p class="subtitle">
+Saison 2 • Semi-Vanilla • Communauté • Survie
+</p>
+
+<div class="ip-box">
+<div class="ip" id="ip">
+SMP_S2.aternos.me:21375
+</div>
+
+<button class="copy-btn" onclick="copyIP()">
+Copier l'IP
+</button>
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Informations Serveur</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Version</h3>
+<p>Serveur en <span class="highlight">1.21.11</span></p>
+<p>Toutes les versions peuvent rejoindre.</p>
+</div>
+
+<div class="card">
+<h3>Accessibilité</h3>
+<p>Serveur ouvert à tous.</p>
+<p>Crack autorisé.</p>
+</div>
+
+<div class="card">
+<h3>World Border</h3>
+<p>Overworld : 1000 blocs de rayon.</p>
+<p>End : 2000 blocs de rayon.</p>
+</div>
+
+<div class="card">
+<h3>Gameplay</h3>
+<p>Phantoms désactivés.</p>
+<p>X-Ray bloqué.</p>
+<p>Survie proche du Vanilla.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Commandes Disponibles</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏠 Homes</h3>
+<p>Chaque joueur possède <strong>3 homes maximum</strong>.</p>
+<br>
+<p>/sethome</p>
+<p>/home</p>
+<p>/delhome</p>
+</div>
+
+<div class="card">
+<h3>📍 Téléportation</h3>
+<p>/tpa</p>
+<p>/tpahere</p>
+</div>
+
+<div class="card">
+<h3>🌍 Spawn</h3>
+<p>/warp spawn</p>
+</div>
+
+<div class="card">
+<h3>🎁 Kit New</h3>
+<p>/kit new</p>
+<br>
+<p>Disponible toutes les <strong>10 minutes</strong>.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Recettes Personnalisées</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🍎 Notch Apple Craftable</h3>
+
+<p>La pomme enchantée peut être craftée.</p>
+
+<br>
+
+<p><strong>Recette :</strong></p>
+
+<p>🟨 Bloc d'or x8</p>
+<p>🍎 Pomme x1 au centre</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚒ Netherite Upgrade Simplifié</h3>
+
+<p>Pas besoin de chercher un template dans les Bastions.</p>
+
+<br>
+
+<p><strong>Recette :</strong></p>
+
+<p>Même recette que le jeu Vanilla.</p>
+<p>Le Netherite Upgrade est remplacé par <strong>7 diamants</strong>.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="end-box">
+
+<h2>⚔ Ouverture de l'End</h2>
+
+<div class="end-date">
+10 Juin 2026
+</div>
+
+<p style="margin-top:20px;">
+L'End restera fermé jusqu'à cette date afin que tous les joueurs démarrent sur un pied d'égalité.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Règles Principales</h2>
+
+<div class="rules">
+
+<div class="card good">
+<h3>✅ Autorisé</h3>
+
+<p>Construction</p>
+<p>Commerce</p>
+<p>Farms</p>
+<p>Jeu en équipe</p>
+<p>Projets communautaires</p>
+
+</div>
+
+<div class="card bad">
+
+<h3>❌ Interdit</h3>
+
+<p>Cheat</p>
+<p>X-Ray</p>
+<p>Exploits abusifs</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Rejoins Vanilla SMP Saison 2</h2>
+
+<br>
+
+<p>SMP_S2.aternos.me:21375</p>
+
+<br>
+
+<p>Bonne survie !</p>
+
+</footer>
+
+<script>
+
+function copyIP(){
+
+navigator.clipboard.writeText("SMP_S2.aternos.me:21375");
+
+const btn = document.querySelector('.copy-btn');
+
+btn.innerText = "IP copiée !";
+
+setTimeout(() => {
+btn.innerText = "Copier l'IP";
+}, 2000);
+
+}
+
+</script>
+
+</body>
+</html>
